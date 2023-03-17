@@ -5,8 +5,10 @@
 
 /**
  * main - Entry point
- * Description: print value of n status; zero, positive or negative
- * Return: Always (Success) 
+ *
+ * Description: print value of n satus; zero, positive or negative
+ *
+ * Return: Always 0 (Success)
 */
 
 int main(void)
