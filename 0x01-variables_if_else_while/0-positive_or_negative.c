@@ -6,7 +6,7 @@
 /**
  * main - Entry point
  * Description: print value of n status; zero, positive or negative
- * Return: Always 0 (Success) 
+ * Return: Always (Success) 
 */
 
 int main(void)
@@ -19,10 +19,10 @@ int main(void)
 	/*my code*/
 	if (n > 0)
 		printf("%i is positive\n", n);
-	else if (n == 0)
-		printf("%i is zero\n", n);
-	else
+	else if (n < 0)
 		printf("%i is negative\n", n);
+	else
+		printf("%i is zero\n", n);
 
 	return (0);
 }
