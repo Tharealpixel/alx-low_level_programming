@@ -12,19 +12,12 @@
 
 int _abs(int r)
 {
-	if (r > 0)
+	if (r < 0)
 	{
-		_putchar(r);
-		return (1);
-	}
-	else if (r == 0)
-	{
-		_putchar(r);
-		return (0);
+		return (-r);
 	}
 	else
 	{
-		_putchar(-r);
-		return (-1);
+		return (r);
 	}
 }
