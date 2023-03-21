@@ -7,6 +7,7 @@
 
 void print_alphabet_x10(void)
 {
+	/* Function implementation */
 	char letter = 'a';
 	int i;
 
