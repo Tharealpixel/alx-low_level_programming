@@ -5,14 +5,14 @@
  * jack_bauer- prints every minute of the day
 */
 
-void jack_bauer(void) 
+void jack_bauer(void)
 {
 	int h = 0;
 	int m = 0;
 
-	while (h < 24) 
+	while (h < 24)
 	{
-		while (m <= 59) 
+		while (m <= 59)
 		{
 			printf("%02d:%02d\n", h, m);
 			m++;
