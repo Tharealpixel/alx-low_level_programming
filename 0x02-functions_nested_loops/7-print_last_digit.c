@@ -7,6 +7,6 @@ int print_last_digit(int r)
 	{
 		last_digit = -last_digit ;
 	}
-	_putchar(last_digit);
+	_putchar("%d\n", last_digit);
 	return (last_digit);
 }
