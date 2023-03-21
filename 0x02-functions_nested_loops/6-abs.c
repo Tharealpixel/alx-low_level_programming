@@ -1,13 +1,12 @@
 #include"main.h"
 
 /**
- * print_sign - print + if n is greater than zero,
- *             0 if n is zero and - if n is less
- *             than zero.
+ * _abs - function that computes the absolute
+ *       value of an integer
  *
- * @n: takes integer type input for function.
+ * @r: takes in integer type input for function
  *
- * Return: 1 if +, 0 if 0 and -1 if -
+ * Return: Always 0 (Success)
 */
 
 int _abs(int r)
