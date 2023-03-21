@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 /**
- * print natural numbers from 0 to 98
+ * print_to_98 - print n to 98 counts
+ *           separated by comma, followed
+ *           by space and number should be
+ *           printed in order
  *
- * Numbers kept  separated by a comma, followed by a space
- *
- */
+ * @n: input
+*/
 
 void print_to_98(int n)
 {
@@ -17,14 +19,14 @@ void print_to_98(int n)
 	
 		for (i = n; i < 98; i++)
 		{
-			printf("%d, ",i);
+			printf("%d,  ", i);
 		}
 	}
 	else
 	{
 		for (i = n; i > 98; i--)
 		{
-			printf("%d, ",i);
+			printf("%d, ", i);
 		}
 	}
 	printf("98\n");
