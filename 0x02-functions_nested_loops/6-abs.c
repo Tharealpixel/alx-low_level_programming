@@ -24,7 +24,7 @@ int int _abs(int r)
 	}
 	else
 	{
-		_putchar(r);
+		_putchar(-r);
 		return (-1);
 	}
 }
