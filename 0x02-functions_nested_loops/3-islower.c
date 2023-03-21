@@ -17,15 +17,4 @@ int _islower(int c)
         {
                 return 0;
         }
-}
-
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	/* my code */
-	return 0;
-}
+}}
