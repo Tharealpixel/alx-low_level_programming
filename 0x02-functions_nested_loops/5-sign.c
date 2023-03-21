@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
+ * print_sign - Prints the sign of a number.
+ * n: The number to check.
  *
- * tkherbi9 dilahom
- *
- *
- * walo mafhmna wlo
- *
+ * Return: 1 if n is positive, -1 if n is negative, 0 otherwise.
  */
 
 int print_sign(int n)
