@@ -1,11 +1,15 @@
 #include <stdio.h>
-/*Main functoin 
+
+/**
+ * main - Entry point
  *
- * Returns zero
+ * Return: Always 0 (Success)
  */
-int main(void) 
-{/*
-* prints _putchar and returs to new line
-*/
-printf("_putchar\n");
-return (0);}
+int main(void)
+{
+	/**
+	 * Prints "_putchar" and returns to new line
+	 */
+	printf("_putchar\n");
+	return (0);
+}
