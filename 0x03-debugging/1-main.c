@@ -13,14 +13,14 @@ int main(void)
 	
 	i = 0;
 
+	/**
+	 * commenting this part cuse error.
 	while (i < 10)
 	{
 		putchar(i);
-		/**
-		 * @i:does not increment so the loop will never end.
-		 *
-		 */
 	}
+	*/
+
 
 	printf("Infinite loop avoided! \\o/\n");
 
