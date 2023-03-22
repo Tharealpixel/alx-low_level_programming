@@ -14,7 +14,10 @@ int main(void)
 	i = 0;
 
 	/**
-	 * commenting this part cuse error.
+	* Commenting out the infinite loop.
+	*
+	* @i: has no incrememt so loop never stops.
+	*
 	while (i < 10)
 	{
 		putchar(i);
