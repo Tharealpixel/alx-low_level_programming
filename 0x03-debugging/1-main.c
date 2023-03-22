@@ -18,10 +18,10 @@ int main(void)
 	*
 	* @i: has no incrememt so loop never stops.
 	*
-	while (i < 10)
-	{
-		putchar(i);
-	}
+	*while (i < 10)
+	*{
+		*putchar(i);
+	*}
 	*/
 
 
