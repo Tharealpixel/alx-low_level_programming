@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * Checks the ASCII value of c
- * @c:if c is between 65 and 90: return 1
- * else return 0
- */
-
+ * _isupper - check if c is upper
+ *
+ * @c: input for alphabet
+ *
+ * Return: 1 if its uppercase, 0 if not
+*/
 
 int _isupper(int c)
 {
