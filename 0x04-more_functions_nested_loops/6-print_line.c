@@ -1,11 +1,11 @@
-#include "main.h"
+#include"main.h"
 
 /**
- * print_line - draws a straight line in the terminal
+ * print_line - print a straight line
  *
- * @n: The number of the character _ 
- * should be printed
- */
+ * @n: is the number of times the _ character
+ *     should be printed
+*/
 
 void print_line(int n)
 {
