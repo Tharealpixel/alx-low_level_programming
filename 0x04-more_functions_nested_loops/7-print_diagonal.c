@@ -10,7 +10,7 @@
 
 void print_diagonal(int n)
 {
-	int postn, c;
+	int postn, space;
 
 	if (n <= 0)
 		_putchar('\n');
@@ -18,7 +18,7 @@ void print_diagonal(int n)
 	{
 		for (postn = 1; postn <= n; ++postn)
 		{
-			for (c = 1; c <= postn; c++)
+			for (space = 1; space <= postn; ++space)
 				_putchar(' ');
 			_putchar(92);
 			_putchar('\n');
