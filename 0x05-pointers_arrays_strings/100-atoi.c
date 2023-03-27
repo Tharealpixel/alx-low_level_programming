@@ -30,7 +30,7 @@ int _atoi(char *s)
 	}
 	while (*s++)
 	{
-		continue;
+		break;
 	}
 
 	return (num * sign);
