@@ -6,10 +6,12 @@
 
 int main(void)
 {
-    srand(time(NULL));
     char pass[PASS_LEN + 1];
+    int i;
 
-    for (int i = 0; i < PASS_LEN; i++) {
+    srand(time(NULL));
+
+    for (i = 0; i < PASS_LEN; i++) {
         int r = rand() % 62;
         if (r < 26) {
             pass[i] = 'a' + r;
