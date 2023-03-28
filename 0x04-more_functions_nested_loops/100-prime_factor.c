@@ -9,19 +9,21 @@
 
 void largest_prime_factor(long int num)
 {
-    long int i;
+	long int i;
 
-    while (num % 2 == 0) {
-        num /= 2;
-    }
+	while (num % 2 == 0)
+	{
+		num /= 2;
+	}
 
-    for (i = 3; i <= sqrt(num); i += 2) {
-        while (num % i == 0) {
-            num /= i;
-        }
-    }
-
-    printf("%ld\n", num);
+	for (i = 3; i <= sqrt(num); i += 2)
+	{
+		while (num % i == 0)
+		{
+			num /= i;
+		}
+	}
+	printf("%ld\n", num);
 }
 
 /**
@@ -32,7 +34,7 @@ void largest_prime_factor(long int num)
 
 int main(void)
 {
-    largest_prime_factor(612852475143);
-    return (0);
+	largest_prime_factor(612852475143);
+	return (0);
 }
 
