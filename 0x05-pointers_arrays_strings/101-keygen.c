@@ -14,14 +14,13 @@ int main(void)
     int i;
     for (i = 0; i < PASSWORD_LENGTH; i++)
     {
-        int random_index = rand() % (sizeof(valid_characters) - 1);
+        int random_index = rand() % (int)(sizeof(valid_characters) - 1);
         password[i] = valid_characters[random_index];
     }
 
-    password[i] = '\0';  // add null terminator at the end
+    password[i] = '\0'; /* add null terminator at the end */
 
     printf("%s", password);
 
     return 0;
 }
-
