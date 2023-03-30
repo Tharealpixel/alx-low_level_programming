@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 int main(void)
 {
@@ -19,7 +20,7 @@ int main(void)
 	* - Use only one statement
 	*/
 
-	*(ptr + 5) = 98; // Assign 98 to the integer variable located 5 integers after ptr
+	*(ptr + 5) = 98; /* Assign 98 to the integer variable located 5 integers after ptr*/
 
 	/* This should print "98\n" */
 	printf("*(ptr + 5) = %d\n", *(ptr + 5));
