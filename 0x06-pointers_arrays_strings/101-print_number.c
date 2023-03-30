@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	unsigned int i;
+	int i = 1;
 
 	if (n < 0)
 	{
@@ -17,11 +17,14 @@ void print_number(int n)
 		n *= -1;
 	}
 
-	i = n;
-
-	if (i / 10)
+	while (n / i > 9)
 	{
-		print_number(i / 10);
+		i *= 10;
 	}
-	_putchar(i % 10 + '0');
+
+	while (i != 0)
+	{
+		_putchar((n / i) % 10 + '0');
+		i /= 10;
+	}
 }
