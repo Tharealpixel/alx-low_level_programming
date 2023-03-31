@@ -6,10 +6,9 @@
   *
   * Return: Nothing
   */
-
 void print_number(int n)
 {
-	unsigned int i = 1;
+	unsigned int x;
 
 	if (n < 0)
 	{
@@ -17,14 +16,10 @@ void print_number(int n)
 		n *= -1;
 	}
 
-	while (n / i > 9)
-	{
-		i *= 10;
-	}
+	x = n;
 
-	while (i != 0)
-	{
-		_putchar((n / i) % 10 + '0');
-		i /= 10;
-	}
+	if (x / 10)
+		print_number(x / 10);
+
+	_putchar(x % 10 + '0');
 }
