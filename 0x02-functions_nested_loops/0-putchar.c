@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints "_putchar" and returns to a new line
  *
- * Return: Always 0 (Success)
+ * Return: always 0 (success)
  */
 int main(void)
 {
-	/**
-	 * Prints "_putchar" and returns to new line
-	 */
 	printf("_putchar\n");
 	return (0);
 }

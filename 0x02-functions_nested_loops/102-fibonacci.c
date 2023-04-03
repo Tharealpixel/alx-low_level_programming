@@ -12,21 +12,25 @@
 
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	int c;
+	unsigned long i = 0, i2 = 1, sum;
 
-	for (count = 0; count < 50; ++count)
+	for (c = 0; c < 50; c++)
 	{
-		sum = fib1 + fib2;
+		sum = i + i2;
 		printf("%lu", sum);
 
-		fib1 = fib2;
-		fib2 = sum;
+		i = i2;
+		i2 = sum;
 
-		if (count == 49)
+		if (c == 49)
+		{
 			printf("\n");
+		}
 		else
+		{
 			printf(", ");
+		}
 	}
 
 	return (0);
