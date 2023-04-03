@@ -18,7 +18,6 @@ char *_memset(char *s, char b, unsigned int n)
 	 * the value is non-negative
 	 *
 	 */
-
 	while (i < n)
 	{
 		s[i] = b;
