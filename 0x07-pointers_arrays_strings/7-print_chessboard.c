@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 
 /**
  * print_chessboard - Prints the chessboard.
@@ -6,15 +7,12 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	_putchar('rkbqkbkr');
-	_putchar('\n');
-	_putchar('pppppppp');
-	_putchar('\n');
-	_putchar('\n');
-	_putchar('\n');
-	_putchar('\n');
-	_putchar('pppppppp');
-	_putchar('\n');
-	_putchar('rkbqkbkr');
+	int i, j;
 
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		_putchar('\n');
+	}
 }
