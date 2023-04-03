@@ -14,7 +14,7 @@ char *_memset(char *s, char b, unsigned int n)
 	unsigned int i = 0;
 	
 	/**
-	 * @i: using unsigned since
+	 * @i:declaring an unsigned since
 	 * the value is non-negative
 	 *
 	 */
