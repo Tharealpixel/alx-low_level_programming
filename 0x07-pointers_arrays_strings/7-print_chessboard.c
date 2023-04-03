@@ -1,5 +1,5 @@
 #include "main.h"
-#include "_putchar.c"
+#include <unistd.h>
 
 /**
  * print_chessboard - Prints the chessboard.
