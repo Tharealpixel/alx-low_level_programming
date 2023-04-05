@@ -4,9 +4,8 @@
  *
  * @n : input number.
  *
- * @f : the result.
- *
- * Return : If n is lower than 0, the function should return -1 to indicate an error
+ * Return : If n is lower than 0,
+ *  the function should return -1
  *          Factorial of 0 is 1.
  */
 
