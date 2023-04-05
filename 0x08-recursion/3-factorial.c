@@ -4,9 +4,8 @@
  *
  * @n : input number.
  *
- * Return : If n is lower than 0,
- *  the function should return -1
- *          Factorial of 0 is 1.
+ * Return : The factorial of @n. If @n is less than 0, returns -1.
+ *         If @n is 0, returns 1.
  */
 
 int factorial(int n)
