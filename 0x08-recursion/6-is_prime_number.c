@@ -14,15 +14,15 @@ int check_prime(int n, int i)
 	{
 		return (0);
 	}
-	if (n % i == 0 && i <= n / 2)
+	if ((n % i == 0) && (i <= n / 2))
 	{
 		return (0);
 	}
-	if (n % i != 0 && i * i <= n )
+	if ((n % i != 0) && (i * i <= n))
 	{
 		return (check_prime(n, i + 1));
 	}
-	if (n % i != 0 && i * i >= n || n == 2)
+	if ((n % i != 0) && (i * i >= n)|| (n == 2))
 	{
 		return (1);
 	}
