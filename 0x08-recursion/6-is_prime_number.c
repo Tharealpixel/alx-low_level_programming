@@ -22,7 +22,7 @@ int check_prime(int n, int i)
 	{
 		return (check_prime(n, i + 1));
 	}
-	if ((n % i != 0) && (i * i >= n)|| (n == 2))
+	if ((n % i != 0) && ((i * i >= n) || (n == 2)))
 	{
 		return (1);
 	}
