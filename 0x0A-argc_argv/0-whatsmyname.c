@@ -3,9 +3,11 @@
 /**
  * main - program that prints its name.
  * @argc: Number of command line arguments
- * @argv: Array 
+ * @argv: Array
+ *
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
 	argc = 1;
