@@ -12,7 +12,7 @@
  */
 int coin_counter(int cents, int coins)
 {
-	if (cents < 0)
+	if (cents < 0 && cents == 0)
 		{
 		printf("0\n");
 		return (0);
