@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		while(*argv)
+		while (*argv)
 		{
 			i++;
 			argv++;
