@@ -2,6 +2,26 @@
 #include <stdlib.h>
 
 /**
+ * _isdigit - checks if input is digit between 0 - 9
+ *
+ * @c: input
+ *
+ * Return: 1 if is digit, 0 if not
+*/
+
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
  * main - program that adds positive numbers.
  * @argc: argument count
  * @argv: array
@@ -23,7 +43,7 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			num = atoi(argv[i]);
-			if (num == 0 && *argv[i] != '0')
+			if (_isdigit(argv[i]) == 0 && num != '-')
 			{
 				printf("Error\n");
 				return (1);
