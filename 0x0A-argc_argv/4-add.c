@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * _isdigit - checks if input is digit between 0 - 9
@@ -11,7 +12,7 @@
 
 int _isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (isdigit(c))
 	{
 		return (1);
 	}
@@ -43,10 +44,22 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			num = atoi(argv[i]);
-			if (_isdigit(argv[i]) == 0 && num != '-')
+			if (*argv[i] == '-')
 			{
 				printf("Error\n");
 				return (1);
+			}
+			else
+			{
+				while (*argv[i])
+				{
+					if (_isdigit(*argv[i]) == 0)
+					{
+						printf("Error\n");
+						return (1);
+					}
+					argv[i]++;
+				}
 			}
 			sum += num;
 		}
