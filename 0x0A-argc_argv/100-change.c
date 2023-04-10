@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		int cents;
-		int x = 0;
+		int coins = 0;
 
 		cents = atoi(argv[1]);
 		if (cents < 0)
@@ -30,29 +30,29 @@ int main(int argc, char *argv[])
 		}
 		if (cents >= 25)
 		{
-			x += c / 25;
-			c = c % 25;
+			coins += cents / 25;
+			cents = cents % 25;
 		}
 		if (cents >= 10)
 		{
-			x += c / 10;
-			c = c % 10;
+			coins += cents / 10;
+			cents = cents % 10;
 		}
 		if (cents >= 5)
 		{
-			x += c / 5;
-			c = c % 5;
+			coins += cents / 5;
+			cents = cents % 5;
 		}
-		if (c >= 2)
+		if (cents >= 2)
 		{
-			x += c / 2;
-			c = c % 2;
+			coins += cents / 2;
+			cents = cents % 2;
 		}
-		if (c == 1)
+		if (cents == 1)
 		{
-			x += 1;
+			coins += 1;
 		}
-		printf("%d\n", x);
+		printf("%d\n", coins);
 	}
 	return (0);
 }
