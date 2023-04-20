@@ -29,7 +29,7 @@ void print_opcodes(unsigned char *start, int num_bytes)
  */
 int main(int argc, char **argv)
 {
-	int num_bytes = atoi(argv[1]);
+	int num_bytes;
 	unsigned char *start = (unsigned char *) &main;
 
 	if (argc != 2)
@@ -37,6 +37,15 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
+	for (int i = 0; argv[1][i] != '\0'; i++)
+	{
+		if (!isdigit(argv[1][i]))
+		{
+			printf("Error\n");
+			return (2);
+		}
+	}
+	num_bytes = atoi(argv[1]);
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
