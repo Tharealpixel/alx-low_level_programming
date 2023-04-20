@@ -1,44 +1,47 @@
+#include <stdio.h>
 #include <stdlib.h>
-
-int main(int argc, char *argv[])
+/**
+ * print_opcodes - prints the opcodes of a given function
+ *
+ * @start: pointer to the function to print the opcodes of
+ * @num_bytes: number of bytes of opcodes to print
+ *
+ * Return: void
+ */
+void print_opcodes(unsigned char *start, int num_bytes)
 {
-	int index, nbytes;
-	char *ptr = (char *)main;
-	char hex[] = "0123456789abcdef";
+	int i;
+
+	for (i = 0; i < num_bytes; i++)
+	{
+		printf("%02x ", *(start + i));
+	}
+	printf("\n");
+}
+
+/**
+ * main - prints the opcodes of its own main function.
+ *
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 on success, 1 or 2 on failure
+ */
+int main(int argc, char **argv)
+{
+	int num_bytes = atoi(argv[1]);
+	unsigned char *start = (unsigned char *) &main;
 
 	if (argc != 2)
 	{
-		char error[] = "Error\n";
-		int i = 0;
-		while (error[i] != '\0')
-		{
-			_putchar(error[i]);
-			i++;
-		}
-		exit(1);
+		printf("Error\n");
+		return (1);
 	}
-
-	nbytes = atoi(argv[1]);
-	if (nbytes < 0)
+	if (num_bytes < 0)
 	{
-		char error[] = "Error\n";
-		int i = 0;
-		while (error[i] != '\0')
-		{
-			_putchar(error[i]);
-			i++;
-		}
-		exit(2);
+		printf("Error\n");
+		return (2);
 	}
-	for (index = 0; index < nbytes; index++)
-	{
-		char c = hex[(ptr[index] >> 4) & 0xF];
-		_putchar(c);
-		c = hex[ptr[index] & 0xF];
-		_putchar(c);
-		if (index != nbytes - 1)
-			_putchar(' ');
-	}
-	_putchar('\n');
-	return 0;
+	print_opcodes(start, num_bytes);
+	return (0);
 }
