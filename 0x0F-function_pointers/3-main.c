@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	oper = argv[2];
 
-	if (get_op_func(oper) == NULL )
+	if (get_op_func(oper) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
