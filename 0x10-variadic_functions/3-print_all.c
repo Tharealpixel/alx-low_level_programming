@@ -93,9 +93,10 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (format && format[i])
 	{
-		while (format != *func.symb[j] && j < 4)
+		j = 0;
+		while (j < 4 && (format[i] != *(func[j].symb)))
 			j++;
-		if (format == *func.symb[j] && j < 4)
+		if (j < 4)
 		{
 			printf("%s", separator);
 			func[j].print(args);
