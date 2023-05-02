@@ -1,18 +1,33 @@
 #include "lists.h"
 
 /**
- * set_bit - Sets the value of a bit at a given index to 1.
- * @n: node pointer
- * @index: The index to set the value
+ * add_nodeint_end - Adds a new node at the end of a list
+ * @head: A pointer to head of the list
+ * @n: The integer for new node
  *
- * Return: 1 or -1 if error
+ * Return: pointer of head or null if it fails
  */
-int set_bit(unsigned long int *n, unsigned int index)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	if (index >= (sizeof(unsigned long int) * 8))
+	listint_t *new, *last;
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+
+	if (*head == NULL)
+		*head = new;
+
+	else
 	{
-		return (-1);
+		last = *head;
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
 	}
-	*n ^= (1 << index);
-	return (1);
+
+	return (*head);
 }
