@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _pow - calculates the value of a base raised to a power
  * @base: the base value
@@ -7,15 +9,15 @@
  */
 int _pow(int base, int exp)
 {
-    int result = 1;
-    int i;
+	int result = 1;
+	int i;
 
-    for (i = 0; i < exp; i++)
-    {
-        result *= base;
-    }
+	for (i = 0; i < exp; i++)
+	{
+		result *= base;
+	}
 
-    return result;
+	return (result);
 }
 
 /**
@@ -26,30 +28,30 @@ int _pow(int base, int exp)
  */
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int num = 0;
-    int len = 0;
-    int i;
+	unsigned int num = 0;
+	int len = 0;
+	int i;
 
-    if (!b)
-        return 0;
+	if (!b)
+		return (0);
 
-    while (b[len] != '\0')
-    {
-        len++;
-    }
+	while (b[len] != '\0')
+	{
+		len++;
+	}
 
-    for (i = 0; i < len; i++)
-    {
-        if (b[i] == '1')
-        {
-            num += _pow(2, len - i - 1);
-        }
-        else if (b[i] != '0')
-        {
-            return 0;
-        }
-    }
+	for (i = 0; i < len; i++)
+	{
+		if (b[i] == '1')
+		{
+			num += _pow(2, len - i - 1);
+		}
+		else if (b[i] != '0')
+		{
+			return (0);
+		}
+	}
 
-    return num;
+	return (num);
 }
 
