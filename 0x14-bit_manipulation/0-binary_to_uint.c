@@ -1,40 +1,55 @@
-#include "main.h"
-
 /**
- * _strlen - gets the length of a string
+ * _pow - calculates the value of a base raised to a power
+ * @base: the base value
+ * @exp: the exponent value
  *
- * @str: string input
- *
- * Return: string length
-*/
-unsigned int _strlen(const char *str)
+ * Return: the result of the base raised to the power
+ */
+int _pow(int base, int exp)
 {
-	unsigned int index = 0;
+    int result = 1;
+    int i;
 
-	while (str[index] != '\0')
-		index++;
-	return (index);
+    for (i = 0; i < exp; i++)
+    {
+        result *= base;
+    }
+
+    return result;
 }
+
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
  * @b: binary to convert
+ *
  * Return: the converted number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i, num, len, j = 0;
+    unsigned int num = 0;
+    int len = 0;
+    int i;
 
+    if (!b)
+        return 0;
 
-	for (i = len; b[i]; i--)
-	{
-		if (b[i] == '1')
-			num += 2 ^ j;
+    while (b[len] != '\0')
+    {
+        len++;
+    }
 
-		else if (b[i] == '0')
-			num += 0;
-		else
-			return (NULL);
-		j++;
-	}
-	return (num);
+    for (i = 0; i < len; i++)
+    {
+        if (b[i] == '1')
+        {
+            num += _pow(2, len - i - 1);
+        }
+        else if (b[i] != '0')
+        {
+            return 0;
+        }
+    }
+
+    return num;
 }
+
