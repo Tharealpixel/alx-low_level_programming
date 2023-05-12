@@ -8,7 +8,7 @@
 /**
  * main - main functio
  * @argc: number of args
- * argv: args
+ * @argv: args
  * Return: 0 , 97-100 if failed
  */
 int main(int argc, char *argv[])
